@@ -1,0 +1,250 @@
+/* ---------------------------
+Global Styles
+--------------------------- */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+body { background: #fff8f0; color:#333; overflow-x:hidden; }
+a { text-decoration:none; color:inherit; }
+button { cursor:pointer; border:none; outline:none; font-family:'Poppins', sans-serif; }
+h2, h3 { color:#b8860b; }
+
+/* ---------------------------
+Hero Section
+--------------------------- */
+header.hero {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background: linear-gradient(135deg, #fff8f0, #fff3e6);
+  position:relative;
+  overflow:hidden;
+}
+header.hero img.logo {
+  width:120px;
+  margin-bottom:15px;
+  z-index:2;
+}
+header.hero img.portrait {
+  width:150px;
+  border-radius:50%;
+  border:4px solid #b8860b;
+  box-shadow: 0 0 25px rgba(184,134,11,0.5);
+  margin-bottom:20px;
+  z-index:2;
+}
+header.hero h1 {
+  font-size:3rem;
+  color:#b8860b;
+  text-shadow: 0 0 15px #b8860b, 0 0 30px #ffd700;
+  animation: glow 2s ease-in-out infinite alternate;
+  z-index:2;
+}
+header.hero p {
+  font-size:1.2rem;
+  color:#555;
+  margin-bottom:25px;
+  z-index:2;
+}
+header.hero .cta-buttons button {
+  background:#b8860b;
+  color:#fff;
+  padding:12px 25px;
+  margin:5px;
+  border-radius:10px;
+  font-weight:600;
+  transition:0.3s;
+  z-index:2;
+}
+header.hero .cta-buttons button:hover {
+  background:#ffd700;
+  color:#333;
+  box-shadow:0 0 15px #ffd700;
+}
+@keyframes glow {
+  from { text-shadow:0 0 10px #b8860b,0 0 30px #ffd700; }
+  to { text-shadow:0 0 20px #ffd700,0 0 60px #fff8dc; }
+}
+#particles-js { position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; }
+
+/* ---------------------------
+Sections & Headings
+--------------------------- */
+section { padding:80px 20px; }
+section h2 { font-size:2rem; margin-bottom:40px; text-align:center; }
+.fade-in { opacity:0; transform:translateY(30px); transition:all 1s ease-out; }
+.fade-in.show { opacity:1; transform:translateY(0); }
+
+/* ---------------------------
+About Section
+--------------------------- */
+.about p { max-width:800px; margin:0 auto; line-height:1.8; font-size:1.1rem; }
+
+/* ---------------------------
+Services Section
+--------------------------- */
+.services {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+.service-card {
+  background:#fff3e6;
+  width:220px;
+  padding:25px 20px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 8px 15px rgba(184,134,11,0.3);
+  transition:all 0.3s ease;
+  cursor:pointer;
+}
+.service-card:hover {
+  transform:translateY(-10px);
+  box-shadow:0 15px 25px rgba(184,134,11,0.6);
+  border:2px solid #b8860b;
+}
+.service-card h3 { margin-bottom:10px; }
+
+/* ---------------------------
+Gemstones Gallery
+--------------------------- */
+.gemstones { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+.gemstone-card {
+  position:relative;
+  width:200px;
+  height:200px;
+  border-radius:15px;
+  overflow:hidden;
+  cursor:pointer;
+  box-shadow:0 5px 15px rgba(184,134,11,0.3);
+  transition:all 0.3s;
+}
+.gemstone-card img { width:100%; height:100%; object-fit:cover; }
+.gemstone-card span {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  text-align:center;
+  background:rgba(184,134,11,0.8);
+  color:#fff;
+  padding:5px 0;
+  font-weight:600;
+}
+.gemstone-card:hover { transform:scale(1.05); box-shadow:0 10px 25px rgba(184,134,11,0.6); }
+
+/* ---------------------------
+Everything Section
+--------------------------- */
+.everything { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+.everything-card {
+  background:#fff3e6;
+  width:220px;
+  padding:25px 20px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 8px 15px rgba(184,134,11,0.3);
+  cursor:pointer;
+  transition:all 0.3s ease;
+}
+.everything-card:hover {
+  transform:translateY(-10px);
+  box-shadow:0 15px 25px rgba(184,134,11,0.6);
+  border:2px solid #b8860b;
+}
+
+/* ---------------------------
+Modal Styling
+--------------------------- */
+.modal {
+  position:fixed;
+  top:0; left:0; right:0; bottom:0;
+  background:rgba(0,0,0,0.6);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:100;
+}
+.modal-content {
+  background:#fff;
+  padding:30px;
+  border-radius:15px;
+  max-width:500px;
+  text-align:center;
+  position:relative;
+  animation:fadeIn 0.4s ease forwards;
+}
+.modal-content h2 { color:#b8860b; margin-bottom:15px; }
+.modal-content p { line-height:1.6; margin-bottom:20px; }
+.modal-content form input, .modal-content form textarea {
+  width:100%;
+  padding:12px;
+  margin-bottom:10px;
+  border-radius:10px;
+  border:1px solid #ccc;
+  outline:none;
+}
+.modal-content form button {
+  padding:12px 25px;
+  border:none;
+  border-radius:10px;
+  background:#b8860b;
+  color:#fff;
+  font-weight:600;
+  transition:0.3s;
+}
+.modal-content form button:hover { background:#ffd700; color:#333; box-shadow:0 0 15px #ffd700; }
+.close-btn {
+  position:absolute;
+  top:15px; right:15px;
+  font-size:1.5rem;
+  cursor:pointer;
+  color:#b8860b;
+}
+@keyframes fadeIn { from {opacity:0; transform: translateY(-20px);} to {opacity:1; transform: translateY(0);} }
+
+/* ---------------------------
+Testimonials
+--------------------------- */
+.testimonials-wrapper { display:flex; overflow-x:auto; gap:20px; padding-bottom:20px; scroll-behavior:smooth; }
+.testimonial-card {
+  min-width:250px;
+  background:#fff3e6;
+  border-radius:15px;
+  padding:20px;
+  box-shadow:0 8px 15px rgba(184,134,11,0.3);
+  flex-shrink:0;
+}
+
+/* ---------------------------
+Contact Section
+--------------------------- */
+.contact { text-align:center; }
+.contact-info a { display:block; margin:10px 0; color:#333; transition:0.3s; }
+.contact-info a:hover { color:#b8860b; text-shadow:0 0 10px #b8860b; }
+.contact-form { margin-top:30px; display:flex; flex-direction:column; align-items:center; gap:15px; }
+.contact-form input, .contact-form textarea {
+  padding:12px;
+  width:100%;
+  max-width:400px;
+  border-radius:10px;
+  border:1px solid #ccc;
+  outline:none;
+}
+.contact-form button { padding:12px 30px; border:none; border-radius:10px; background:#b8860b; color:#fff; font-weight:600; transition:0.3s; }
+.contact-form button:hover { background:#ffd700; color:#333; box-shadow:0 0 15px #ffd700; }
+
+/* ---------------------------
+Footer
+--------------------------- */
+footer { background:#fff3e6; padding:20px; text-align:center; color:#555; font-size:0.9rem; }
+
+/* ---------------------------
+Responsive
+--------------------------- */
+@media(max-width:768px){
+  .services,.gemstones,.everything,.testimonials-wrapper{ flex-direction:column; align-items:center; }
+  header.hero h1 { font-size:2.2rem; }
+  header.hero p { font-size:1rem; }
+}
